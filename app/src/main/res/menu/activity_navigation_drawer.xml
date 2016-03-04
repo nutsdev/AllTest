@@ -3,6 +3,10 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_item_vector_compat"
+            android:icon="@drawable/ic_menu_android_24dp"
+            android:title="@string/Vector_Compat" />
+        <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
             android:title="Import" />
@@ -12,7 +16,7 @@
             android:title="Gallery" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_slideshow"
             android:title="Slideshow" />
         <item
             android:id="@+id/nav_manage"

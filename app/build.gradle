@@ -1,4 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0]?.processResources?.manifestFile
+        resourcePackageName android.defaultConfig.applicationId
+    }
+}
 
 android {
     compileSdkVersion 23
@@ -10,6 +18,13 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        // need for using VectorDrawables with Gradle Plugin 1.5
+        generatedDensities = []
+    }
+    // need for using VectorDrawables with Gradle Plugin 1.5 - This is handled for you by the 2.0+ Gradle Plugin
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
     }
     buildTypes {
         release {
@@ -22,6 +37,17 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+
+    // support libraries
+    compile 'com.android.support:support-v4:23.2.0'
     compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:recyclerview-v7:23.2.0'
     compile 'com.android.support:design:23.2.0'
+
+    // GCM
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+
+    // android annotations
+    apt "org.androidannotations:androidannotations:3.3.2"
+    compile 'org.androidannotations:androidannotations-api:3.3.2'
 }
