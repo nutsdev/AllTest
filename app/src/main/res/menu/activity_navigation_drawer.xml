@@ -7,6 +7,10 @@
             android:icon="@drawable/ic_menu_android_24dp"
             android:title="@string/Vector_Compat" />
         <item
+            android:id="@+id/nav_item_glide"
+            android:icon="@drawable/common_ic_googleplayservices"
+            android:title="@string/Glide" />
+        <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
             android:title="Import" />

@@ -17,7 +17,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.nutsdev.alltest.R;
-import com.nutsdev.alltest.ui.fragments.VectorCompatFragment;
+import com.nutsdev.alltest.ui.fragments.GlideFragment_;
 import com.nutsdev.alltest.ui.fragments.VectorCompatFragment_;
 
 import org.androidannotations.annotations.EActivity;
@@ -106,9 +106,15 @@ public class NavigationActivity extends BaseActivity {
             // Handle navigation view item clicks here.
             int id = item.getItemId();
 
+            Fragment fragment = null;
+            String fragmentTag = null;
             if (id == R.id.nav_item_vector_compat) {
-                VectorCompatFragment fragment = VectorCompatFragment_.builder().build();
-                switchFragment(fragment, "VectorCompatFragment", 0, false);
+                fragment = VectorCompatFragment_.builder().build();
+                fragmentTag = "VectorCompatFragment";
+            }
+            else if (id == R.id.nav_item_glide) {
+                fragment = GlideFragment_.builder().build();
+                fragmentTag = "GlideFragment";
             }
             else if (id == R.id.nav_camera) {
                 // Handle the camera action
@@ -123,6 +129,9 @@ public class NavigationActivity extends BaseActivity {
             } else if (id == R.id.nav_send) {
 
             }
+
+            if (fragment != null)
+                switchFragment(fragment, fragmentTag, 0, false);
 
             DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerLayout);
             drawer.closeDrawer(GravityCompat.START);
