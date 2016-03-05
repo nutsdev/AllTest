@@ -4,6 +4,7 @@ package com.nutsdev.alltest.ui.fragments;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.nutsdev.alltest.R;
 
 import org.androidannotations.annotations.AfterViews;
@@ -25,7 +26,7 @@ public class GlideFragment extends BaseFragment {
     protected void afterView() {
         Glide.with(this)
                 .load(GITHUB_IMAGE_URL)
-                .centerCrop()
+                .diskCacheStrategy(DiskCacheStrategy.SOURCE) // to take already loaded image from the cache instead of reloading it from the internet
                 .placeholder(R.raw.gif_round_progress_2)
                 .into(imageView);
     }
