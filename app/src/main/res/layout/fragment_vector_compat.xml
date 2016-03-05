@@ -6,10 +6,12 @@
     android:orientation="vertical"
     tools:context="com.nutsdev.alltest.ui.fragments.VectorCompatFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:gravity="center_vertical"
-        android:drawableLeft="@drawable/ic_menu_android_24dp"
+        android:drawableLeft="@drawable/selector_ic_menu_android"
+        android:drawableStart="@drawable/selector_ic_menu_android"
+        android:drawableRight="@drawable/selector_ic_menu_camera"
+        android:drawableEnd="@drawable/selector_ic_menu_camera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment" />
@@ -17,6 +19,6 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:srcCompat="@drawable/ic_menu_android_24dp" />
+        android:src="@drawable/selector_ic_menu_android" />
 
 </LinearLayout>
