@@ -11,6 +11,10 @@
             android:icon="@drawable/common_ic_googleplayservices"
             android:title="@string/Glide" />
         <item
+            android:id="@+id/nav_item_day_night_theme"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/DayNight_theme" />
+        <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
             android:title="Import" />

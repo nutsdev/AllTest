@@ -11,4 +11,7 @@
     <string name="Vector_Compat">Vector Compat</string>
     <string name="Press_back_button_again_to_close">Press back button again to exit</string>
     <string name="Glide">Glide</string>
+    <string name="DayNight_theme">DayNight Theme</string>
+    <string name="Night_Mode">Night Mode!</string>
+    <string name="Day_Mode">Day Mode!</string>
 </resources>

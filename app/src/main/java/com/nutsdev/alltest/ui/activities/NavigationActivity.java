@@ -116,6 +116,9 @@ public class NavigationActivity extends BaseActivity {
                 fragment = GlideFragment_.builder().build();
                 fragmentTag = "GlideFragment";
             }
+            else if (id == R.id.nav_item_day_night_theme) {
+                DayNightActivity_.intent(NavigationActivity.this).start();
+            }
             else if (id == R.id.nav_camera) {
                 // Handle the camera action
             } else if (id == R.id.nav_gallery) {
