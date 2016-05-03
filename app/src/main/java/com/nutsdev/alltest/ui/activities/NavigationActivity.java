@@ -119,6 +119,9 @@ public class NavigationActivity extends BaseActivity {
             else if (id == R.id.nav_item_day_night_theme) {
                 DayNightActivity_.intent(NavigationActivity.this).start();
             }
+            else if (id == R.id.nav_item_bottom_sheet) {
+                BottomSheetActivity_.intent(NavigationActivity.this).start();
+            }
             else if (id == R.id.nav_camera) {
                 // Handle the camera action
             } else if (id == R.id.nav_gallery) {

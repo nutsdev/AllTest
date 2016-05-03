@@ -16,6 +16,11 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/DayNight_theme" />
         <item
+            android:checkable="false"
+            android:id="@+id/nav_item_bottom_sheet"
+            android:icon="@drawable/common_google_signin_btn_icon_light_pressed"
+            android:title="@string/bottom_sheet" />
+        <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
             android:title="Import" />
