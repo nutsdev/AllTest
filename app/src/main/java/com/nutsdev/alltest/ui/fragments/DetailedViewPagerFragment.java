@@ -1,7 +1,6 @@
 package com.nutsdev.alltest.ui.fragments;
 
-
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 
 import com.nutsdev.alltest.R;
 import com.nutsdev.alltest.data.entities.Media;

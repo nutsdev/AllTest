@@ -1,5 +1,6 @@
 package com.nutsdev.alltest.ui.fragments;
 
+import android.app.Fragment;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.view.MotionEvent;
@@ -21,7 +22,7 @@ import org.androidannotations.annotations.Touch;
 import org.androidannotations.annotations.ViewById;
 
 @EFragment(R.layout.fragment_view_post_media_item)
-public class ViewPostMediaItemFragment extends BaseFragment {
+public class ViewPostMediaItemFragment extends Fragment {
 
     public static final int STATE_PHOTO = 0;
     public static final int STATE_VIDEO = 1;

@@ -1,6 +1,6 @@
 package com.nutsdev.alltest.ui.adapters;
 
-import android.support.v4.app.FragmentManager;
+import android.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

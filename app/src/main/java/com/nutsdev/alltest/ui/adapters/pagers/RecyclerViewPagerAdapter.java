@@ -1,8 +1,8 @@
 package com.nutsdev.alltest.ui.adapters.pagers;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.support.v13.app.FragmentStatePagerAdapter;
 
 import com.nutsdev.alltest.data.entities.Media;
 import com.nutsdev.alltest.ui.fragments.ViewPostMediaItemFragment;

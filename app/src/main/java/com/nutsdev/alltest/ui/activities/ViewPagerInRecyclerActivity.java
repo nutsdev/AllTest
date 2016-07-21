@@ -1,9 +1,9 @@
 package com.nutsdev.alltest.ui.activities;
 
+import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 
 import com.nutsdev.alltest.R;
 import com.nutsdev.alltest.ui.adapters.ViewPagerInRecyclerAdapter;
@@ -15,7 +15,7 @@ import com.nutsdev.alltest.ui.fragments.ViewPagerInRecyclerFragment_;
 import org.androidannotations.annotations.EActivity;
 
 @EActivity(R.layout.activity_view_pager_in_recycler)
-public class ViewPagerInRecyclerActivity extends AppCompatActivity implements ViewPagerInRecyclerFragment.OnItemClickListener {
+public class ViewPagerInRecyclerActivity extends Activity implements ViewPagerInRecyclerFragment.OnItemClickListener {
 
     private static final String TAG_FRAGMENT_VIEWPAGER_IN_RECYCLER = "TAG_FRAGMENT_VIEWPAGER_IN_RECYCLER";
     private static final String TAG_FRAGMENT_DETAILED_VIEWPAGER = "TAG_FRAGMENT_DETAILED_VIEWPAGER";
@@ -46,7 +46,7 @@ public class ViewPagerInRecyclerActivity extends AppCompatActivity implements Vi
     /* private methods */
 
     private void switchFragment(Fragment fragment, String tag) {
-        getSupportFragmentManager().beginTransaction()
+        getFragmentManager().beginTransaction()
                 .replace(R.id.container_view, fragment, tag)
                 .addToBackStack(null)
                 .commit();
