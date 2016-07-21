@@ -46,9 +46,10 @@ public class ViewPagerInRecyclerActivity extends AppCompatActivity implements Vi
     /* private methods */
 
     private void switchFragment(Fragment fragment, String tag) {
-        getSupportFragmentManager().beginTransaction().
-                replace(R.id.container_view, fragment, tag).
-                commit();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container_view, fragment, tag)
+                .addToBackStack(null)
+                .commit();
     }
 
 }

@@ -49,10 +49,16 @@ public class ViewPagerInRecyclerAdapter extends RecyclerView.Adapter<ViewPagerIn
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.viewPagerItem = items.get(position);
         final RecyclerViewPagerAdapter viewPagerAdapter = new RecyclerViewPagerAdapter(childFragmentManager);
+        viewPagerAdapter.setOnPhotoClickListener(new RecyclerViewPagerAdapter.Action1<Media>() {
+            @Override
+            public void run(Media var1) {
+                itemClickListener.onItemClick(holder.viewPagerItem);
+            }
+        });
         viewPagerAdapter.items.addAll(items.get(position).mediaList);
         holder.viewPager.setAdapter(viewPagerAdapter);
 
-        holder.root_view.setOnClickListener(new View.OnClickListener() {
+    /*    holder.root_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (null != itemClickListener) {
@@ -61,7 +67,7 @@ public class ViewPagerInRecyclerAdapter extends RecyclerView.Adapter<ViewPagerIn
                     itemClickListener.onItemClick(holder.viewPagerItem);
                 }
             }
-        });
+        }); */
     }
 
     @Override

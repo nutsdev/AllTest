@@ -15,6 +15,8 @@ public class RecyclerViewPagerAdapter extends FragmentStatePagerAdapter {
 
     public final List<Object> items;
 
+    private Action1<Media> onPhotoClickListener;
+
     public RecyclerViewPagerAdapter(FragmentManager fm) {
         super(fm);
         items = new ArrayList<>();
@@ -29,6 +31,9 @@ public class RecyclerViewPagerAdapter extends FragmentStatePagerAdapter {
             Media media = (Media) item;
             if (media.mediaType == Media.MEDIA_TYPE_PHOTO) {
                 fragment = ViewPostMediaItemFragment_.builder().state(ViewPostMediaItemFragment.STATE_PHOTO).media(media).build();
+                if (onPhotoClickListener != null) {
+                    fragment.setOnPhotoClickListener(onPhotoClickListener);
+                }
             } else if (media.mediaType == Media.MEDIA_TYPE_VIDEO) {
                 fragment = ViewPostMediaItemFragment_.builder().state(ViewPostMediaItemFragment.STATE_VIDEO).media(media).build();
             } else {
@@ -44,6 +49,17 @@ public class RecyclerViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount() {
         return items.size();
+    }
+
+    public void setOnPhotoClickListener(Action1<Media> onPhotoClickListener) {
+        this.onPhotoClickListener = onPhotoClickListener;
+    }
+
+
+    /* inner types */
+
+    public interface Action1<T> {
+        void run(T var1);
     }
 
 }

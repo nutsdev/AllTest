@@ -10,6 +10,7 @@ import android.widget.VideoView;
 import com.bumptech.glide.Glide;
 import com.nutsdev.alltest.R;
 import com.nutsdev.alltest.data.entities.Media;
+import com.nutsdev.alltest.ui.adapters.pagers.RecyclerViewPagerAdapter;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -25,7 +26,7 @@ public class ViewPostMediaItemFragment extends BaseFragment {
     public static final int STATE_PHOTO = 0;
     public static final int STATE_VIDEO = 1;
 
-//    private Action1<ServerPhotoInfo> onPhotoClickListener;
+    private RecyclerViewPagerAdapter.Action1<Media> onPhotoClickListener;
 
     private MediaPlayer mediaPlayer;
 
@@ -106,12 +107,12 @@ public class ViewPostMediaItemFragment extends BaseFragment {
         }
     }
 
- /*   @Click(R.id.photo_view)
+    @Click(R.id.photo_view)
     protected void photo_view_click() {
-        if (onPhotoClickListener != null && serverPhotoInfo != null) {
-            onPhotoClickListener.run(serverPhotoInfo);
+        if (onPhotoClickListener != null && media != null) {
+            onPhotoClickListener.run(media);
         }
-    } */
+    }
 
     @Click(R.id.play_imageView)
     protected void play_imageView_click() {
@@ -143,9 +144,9 @@ public class ViewPostMediaItemFragment extends BaseFragment {
 
     /* public methods */
 
-/*    public void setOnPhotoClickListener(Action1<ServerPhotoInfo> onPhotoClickListener) {
+    public void setOnPhotoClickListener(RecyclerViewPagerAdapter.Action1<Media> onPhotoClickListener) {
         this.onPhotoClickListener = onPhotoClickListener;
-    } */
+    }
 
 
     /* private methods */

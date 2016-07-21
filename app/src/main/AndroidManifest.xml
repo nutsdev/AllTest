@@ -24,6 +24,7 @@
         <activity
             android:name=".ui.activities.BottomSheetActivity_" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".ui.activities.ViewPagerInRecyclerActivity_" />
     </application>
 
