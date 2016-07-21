@@ -122,8 +122,8 @@ public class NavigationActivity extends BaseActivity {
             else if (id == R.id.nav_item_bottom_sheet) {
                 BottomSheetActivity_.intent(NavigationActivity.this).start();
             }
-            else if (id == R.id.nav_camera) {
-                // Handle the camera action
+            else if (id == R.id.nav_item_viewPager_recycler) {
+                ViewPagerInRecyclerActivity_.intent(NavigationActivity.this).start();
             } else if (id == R.id.nav_gallery) {
 
             } else if (id == R.id.nav_slideshow) {

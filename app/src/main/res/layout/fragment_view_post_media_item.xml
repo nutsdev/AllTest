@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:background="@android:color/black"
+        android:id="@+id/videoContainer_view"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <VideoView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/videoView" />
+
+        <ImageView
+            android:id="@+id/play_imageView"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:src="@android:drawable/ic_media_play"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/photo_view">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/photo_imageView"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null" />
+    </FrameLayout>
+
+</FrameLayout>

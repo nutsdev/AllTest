@@ -21,9 +21,9 @@
             android:icon="@drawable/common_google_signin_btn_icon_light_pressed"
             android:title="@string/bottom_sheet" />
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_item_viewPager_recycler"
             android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:title="@string/ViewPager_in_RecyclerView" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"

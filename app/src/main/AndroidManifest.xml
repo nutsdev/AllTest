@@ -22,7 +22,9 @@
             android:name=".ui.activities.DayNightActivity_"
             android:theme="@style/AppTheme.DayNightCompat" />
         <activity
-            android:name=".ui.activities.BottomSheetActivity_"/>
+            android:name=".ui.activities.BottomSheetActivity_" />
+        <activity
+            android:name=".ui.activities.ViewPagerInRecyclerActivity_" />
     </application>
 
 </manifest>
