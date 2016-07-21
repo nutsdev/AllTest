@@ -63,12 +63,12 @@ public class ViewPagerInRecyclerFragment extends Fragment {
         mediaList.add(new Media(Media.MEDIA_TYPE_PHOTO, "http://67ffebe8b4d74e13168f-9cfc777b0f242f35a469d08318ce0985.r21.cf1.rackcdn.com/mKHRz5YeY0.jpeg"));
 
         ArrayList<ViewPagerInRecyclerAdapter.ViewPagerItem> items = new ArrayList<>();
-        FragmentManager childFragmentManager = getChildFragmentManager();
+        FragmentManager fragmentManager = getFragmentManager(); // don't use childFragmentManager here!!!!
         for (int i = 0; i < 10; i++) {
             items.add(new ViewPagerInRecyclerAdapter.ViewPagerItem(mediaList));
         }
 
-        recyclerView.setAdapter(new ViewPagerInRecyclerAdapter(items, itemClickListener, childFragmentManager));
+        recyclerView.setAdapter(new ViewPagerInRecyclerAdapter(items, itemClickListener, fragmentManager));
     }
 
     /* inner types */
