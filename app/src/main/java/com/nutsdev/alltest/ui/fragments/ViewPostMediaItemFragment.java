@@ -92,6 +92,7 @@ public class ViewPostMediaItemFragment extends BaseFragment {
                 photo_view.setVisibility(View.VISIBLE);
                 if (media != null) {
                     Glide.with(getActivity()).load(media.url).centerCrop().into(photo_imageView);
+                    // Picasso.with(getActivity()).load(media.url).centerCrop().fit().into(photo_imageView);
                 }
                 break;
             case STATE_VIDEO:
