@@ -21,7 +21,7 @@ public class ViewPagerInRecyclerAdapter extends RecyclerView.Adapter<ViewPagerIn
 
     private final ViewPagerInRecyclerFragment.OnItemClickListener itemClickListener;
 
-    private FragmentManager childFragmentManager;
+    private FragmentManager fragmentManager;
 
     public ViewPagerInRecyclerAdapter(ViewPagerInRecyclerFragment.OnItemClickListener itemClickListener) {
         this.items = new ArrayList<>();
@@ -33,10 +33,10 @@ public class ViewPagerInRecyclerAdapter extends RecyclerView.Adapter<ViewPagerIn
         itemClickListener = listener;
     }
 
-    public ViewPagerInRecyclerAdapter(List<ViewPagerItem> items, ViewPagerInRecyclerFragment.OnItemClickListener itemClickListener, FragmentManager childFragmentManager) {
+    public ViewPagerInRecyclerAdapter(List<ViewPagerItem> items, ViewPagerInRecyclerFragment.OnItemClickListener itemClickListener, FragmentManager fragmentManager) {
         this.items = items;
         this.itemClickListener = itemClickListener;
-        this.childFragmentManager = childFragmentManager;
+        this.fragmentManager = fragmentManager;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class ViewPagerInRecyclerAdapter extends RecyclerView.Adapter<ViewPagerIn
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.viewPagerItem = items.get(position);
-        final RecyclerViewPagerAdapter viewPagerAdapter = new RecyclerViewPagerAdapter(childFragmentManager);
+        final RecyclerViewPagerAdapter viewPagerAdapter = new RecyclerViewPagerAdapter(fragmentManager);
         viewPagerAdapter.setOnPhotoClickListener(new RecyclerViewPagerAdapter.Action1<Media>() {
             @Override
             public void run(Media var1) {

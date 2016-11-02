@@ -2,8 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.nutsdev.alltest.ui.fragments.DetailedViewPagerFragment">
 
     <include layout="@layout/item_viewpager" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:text="Detailed View Fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

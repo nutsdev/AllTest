@@ -8,7 +8,7 @@
             android:title="@string/Vector_Compat" />
         <item
             android:id="@+id/nav_item_glide"
-            android:icon="@drawable/common_ic_googleplayservices"
+            android:icon="@drawable/common_google_signin_btn_icon_light_normal"
             android:title="@string/Glide" />
         <item
             android:checkable="false"
