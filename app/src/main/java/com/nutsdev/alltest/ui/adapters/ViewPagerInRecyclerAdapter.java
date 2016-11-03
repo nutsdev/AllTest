@@ -56,7 +56,8 @@ public class ViewPagerInRecyclerAdapter extends RecyclerView.Adapter<ViewPagerIn
             }
         });
         viewPagerAdapter.items.addAll(items.get(position).mediaList);
-        holder.viewPager.setId(position + getItemCount()); // WORKS ONLY WITH THIS LINE!!!
+        holder.viewPager.setId(R.id.viewpager_id_base + position); // WORKS ONLY WITH THIS LINE!!!
+    //    holder.viewPager.setId(position + getItemCount()); // WORKS ONLY WITH THIS LINE!!!
         holder.viewPager.setAdapter(viewPagerAdapter);
 
     /*    holder.root_view.setOnClickListener(new View.OnClickListener() {

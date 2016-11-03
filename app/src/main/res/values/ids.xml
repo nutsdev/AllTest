@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- use to generate non-conflicting ids for the viewpager -->
+    <item name="viewpager_id_base" type="id"/>
+
+</resources>
