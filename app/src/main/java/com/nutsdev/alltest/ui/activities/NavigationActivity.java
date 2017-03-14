@@ -124,8 +124,8 @@ public class NavigationActivity extends BaseActivity {
             }
             else if (id == R.id.nav_item_viewPager_recycler) {
                 ViewPagerInRecyclerActivity_.intent(NavigationActivity.this).start();
-            } else if (id == R.id.nav_gallery) {
-
+            } else if (id == R.id.nav_square_move_test) {
+                SquareMoveTestActivity_.intent(NavigationActivity.this).start();
             } else if (id == R.id.nav_slideshow) {
 
             } else if (id == R.id.nav_manage) {

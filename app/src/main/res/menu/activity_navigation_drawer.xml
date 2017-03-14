@@ -18,16 +18,16 @@
         <item
             android:checkable="false"
             android:id="@+id/nav_item_bottom_sheet"
-            android:icon="@drawable/common_google_signin_btn_icon_light_pressed"
+            android:icon="@drawable/common_google_signin_btn_icon_dark_normal_background"
             android:title="@string/bottom_sheet" />
         <item
             android:id="@+id/nav_item_viewPager_recycler"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/ViewPager_in_RecyclerView" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_square_move_test"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="Square Move Test" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_slideshow"
