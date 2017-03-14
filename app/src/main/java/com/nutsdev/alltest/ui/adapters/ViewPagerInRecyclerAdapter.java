@@ -23,16 +23,6 @@ public class ViewPagerInRecyclerAdapter extends RecyclerView.Adapter<ViewPagerIn
 
     private FragmentManager fragmentManager;
 
-    public ViewPagerInRecyclerAdapter(ViewPagerInRecyclerFragment.OnItemClickListener itemClickListener) {
-        this.items = new ArrayList<>();
-        this.itemClickListener = itemClickListener;
-    }
-
-    public ViewPagerInRecyclerAdapter(List<ViewPagerItem> items, ViewPagerInRecyclerFragment.OnItemClickListener listener) {
-        this.items = items;
-        itemClickListener = listener;
-    }
-
     public ViewPagerInRecyclerAdapter(List<ViewPagerItem> items, ViewPagerInRecyclerFragment.OnItemClickListener itemClickListener, FragmentManager fragmentManager) {
         this.items = items;
         this.itemClickListener = itemClickListener;
