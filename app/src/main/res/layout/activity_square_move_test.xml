@@ -7,23 +7,14 @@
     android:background="@android:color/black"
     tools:context=".ui.activities.SquareMoveTestActivity">
 
-    <ScrollView
-        android:id="@+id/scrollView"
+    <FrameLayout
+        android:id="@+id/videoContainer_view"
+        android:clipChildren="false"
         android:layout_width="match_parent"
         android:layout_height="200dp">
 
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <ImageView
-                android:scaleType="fitXY"
-                android:src="@drawable/sheeps"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </HorizontalScrollView>
-    </ScrollView>
+    </FrameLayout>
 
     <LinearLayout
         android:background="@android:color/holo_blue_bright"
