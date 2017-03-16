@@ -78,8 +78,11 @@ public class SquareMoveTestActivity extends AppCompatActivity {
         // need READ_EXTERNAL_STORAGE permission for correct work
         if (videoUri == null) {
             videoUri = Uri.parse("content://media/external/video/media/33081");
-            // content://media/external/video/media/32943 // local horizontal video for testing
-            // content://media/external/video/media/33081 // local vertical video for testing
+            // content://media/external/video/media/32943 // local horizontal FullHD video for testing
+            // content://media/external/video/media/33083 // local horizontal SD video for testing
+
+            // content://media/external/video/media/33081 // local vertical FullHD video for testing
+            // content://media/external/video/media/33082 // local vertical SD video for testing
         }
 
         // 1. Create a default TrackSelector
