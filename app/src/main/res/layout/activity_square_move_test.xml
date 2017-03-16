@@ -9,10 +9,18 @@
 
     <FrameLayout
         android:id="@+id/videoContainer_view"
-        android:clipChildren="false"
         android:layout_width="match_parent"
         android:layout_height="200dp">
 
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                layout="@layout/partial_simple_exo_player" />
+
+        </ScrollView>
 
     </FrameLayout>
 
