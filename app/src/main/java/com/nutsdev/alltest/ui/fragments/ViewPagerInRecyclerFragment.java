@@ -88,7 +88,9 @@ public class ViewPagerInRecyclerFragment extends Fragment {
         if (fragments != null) {
             final FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
             for (Fragment fragment : fragments) {
-                fragmentTransaction.remove(fragment);
+                if (fragment != null) {
+                    fragmentTransaction.remove(fragment);
+                }
             }
             fragmentTransaction.commit();
         }
