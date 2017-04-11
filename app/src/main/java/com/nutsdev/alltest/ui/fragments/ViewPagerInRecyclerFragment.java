@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 
 import com.nutsdev.alltest.R;
@@ -15,6 +16,7 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @EFragment(R.layout.fragment_viewpager_in_recycler)
 public class ViewPagerInRecyclerFragment extends Fragment {
@@ -49,6 +51,13 @@ public class ViewPagerInRecyclerFragment extends Fragment {
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+
+        removeAllFragmentsFromChildFragmentManager();
+    }
+
+    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
@@ -63,13 +72,28 @@ public class ViewPagerInRecyclerFragment extends Fragment {
         mediaList.add(new Media(Media.MEDIA_TYPE_PHOTO, "http://67ffebe8b4d74e13168f-9cfc777b0f242f35a469d08318ce0985.r21.cf1.rackcdn.com/mKHRz5YeY0.jpeg"));
 
         ArrayList<ViewPagerInRecyclerAdapter.ViewPagerItem> items = new ArrayList<>();
-        FragmentManager fragmentManager = getFragmentManager(); // don't use childFragmentManager here!!!!
+        FragmentManager fragmentManager = getChildFragmentManager(); // don't use childFragmentManager here!!!!
         for (int i = 0; i < 10; i++) {
             items.add(new ViewPagerInRecyclerAdapter.ViewPagerItem(mediaList));
         }
 
         recyclerView.setAdapter(new ViewPagerInRecyclerAdapter(items, itemClickListener, fragmentManager));
     }
+
+
+    /* private methods */
+
+    private void removeAllFragmentsFromChildFragmentManager() {
+        final List<Fragment> fragments = getChildFragmentManager().getFragments();
+        if (fragments != null) {
+            final FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
+            for (Fragment fragment : fragments) {
+                fragmentTransaction.remove(fragment);
+            }
+            fragmentTransaction.commit();
+        }
+    }
+
 
     /* inner types */
 
